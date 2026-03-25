@@ -15,7 +15,7 @@ public class Procesos {
 	}
 	
 	public void calcularCompra(ClienteDTO cliente) {
-		
+		/*
 		Double compra;
 		double porcentaje;
 		double precioTotal;
@@ -26,41 +26,41 @@ public class Procesos {
 		
 		 case "A":
 			 	porcentaje= 0.40;
-				precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
+				//precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
 				descuento= precioTotal*porcentaje;				
 				compra= precioTotal-descuento;
-				cliente.setCompraTotal(compra);
+				//cliente.setCompraTotal(compra);
 		        break;
 		
 		
 		case "B":
 			 porcentaje= 0.20;
-			 precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
+			// precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
 			 descuento= precioTotal*porcentaje;
 			
 			compra= precioTotal-descuento;
-			cliente.setCompraTotal(compra);
+			//cliente.setCompraTotal(compra);
 	        break;
 	
 	
 		case "C":
 			porcentaje= 0.10;
-			precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
+			//precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
 			descuento= precioTotal*porcentaje;
 			
 			compra= precioTotal-descuento;
-			cliente.setCompraTotal(compra);
+			//cliente.setCompraTotal(compra);
 		      break;
 		      
 		 default:
 			 
 			System.out.println("No se le realiza descuento");			
-			precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
-			cliente.setCompraTotal(precioTotal);
+			//precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
+			//cliente.setCompraTotal(precioTotal);
 			break;
 		
 		}
-		
+		*/
 		
 		
 		

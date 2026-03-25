@@ -4,31 +4,31 @@ public class ClienteDTO {
 	
 	private String nombre;
 	private String apellido;
+	private String documento;
 	private int edad;
 	private String telefono;
 	private String tipo;
-	private String nombreProducto;
-	private double valorUnitario;
-	private double cantidadProductos;
-	private double compraTotal;
+	
+	
+	
+	public ClienteDTO() {
+		
+	}
 	 
 
 	
 	
 	
 	
-	public ClienteDTO(String nombre, String apellido, int edad, String telefono, String tipo, String nombreProducto,
-			double valorUnitario, double cantidadProductos, double compraTotal) {
+	public ClienteDTO(String nombre, String apellido, String documento,int edad, String telefono, String tipo) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
+		this.documento= documento;
 		this.edad = edad;
 		this.telefono = telefono;
 		this.tipo = tipo;
-		this.nombreProducto = nombreProducto;
-		this.valorUnitario = valorUnitario;
-		this.cantidadProductos = cantidadProductos;
-		this.compraTotal = compraTotal;
+		
 	}
 	
 	public String getNombre() {
@@ -43,6 +43,16 @@ public class ClienteDTO {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+	
+	
+	public String getDocumento() {
+		return documento;
+	}
+
+	public void setDocumento(String documento) {
+		this.documento = documento;
+	}
+
 	public int getEdad() {
 		return edad;
 	}
@@ -64,39 +74,15 @@ public class ClienteDTO {
 	
 	
 	
-	public String getNombreProducto() {
-		return nombreProducto;
-	}
-	public void setNombreProducto(String nombreProducto) {
-		this.nombreProducto = nombreProducto;
-	}
-	public double getValorUnitario() {
-		return valorUnitario;
-	}
-	public void setValorUnitario(double valorUnitario) {
-		this.valorUnitario = valorUnitario;
-	}
-	public double getCantidadProductos() {
-		return cantidadProductos;
-	}
-	public void setCantidadProductos(double cantidadProductos) {
-		this.cantidadProductos = cantidadProductos;
-	}
 	
-	
-	public double getCompraTotal() {
-		return compraTotal;
-	}
-	public void setCompraTotal(double compraTotal) {
-		this.compraTotal = compraTotal;
-	}
-	
+
 	@Override
 	public String toString() {
-		return "ClienteDTO [nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", telefono=" + telefono
-				+ ", tipo=" + tipo + ", nombreProducto=" + nombreProducto + ", valorUnitario=" + valorUnitario
-				+ ", cantidadProductos=" + cantidadProductos + ", compraTotal=" + compraTotal + "]";
+		return "ClienteDTO [nombre=" + nombre + ", apellido=" + apellido + ", documento=" + documento + ", edad=" + edad
+				+ ", telefono=" + telefono + ", tipo=" + tipo;
 	}
+	
+	
 	
 	
 	

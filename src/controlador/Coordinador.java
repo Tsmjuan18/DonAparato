@@ -30,6 +30,7 @@ public class Coordinador {
 	}
 	
 	public void mostraVentanaCompra() {
+		miVentanaCompra.setVisible(true);
 		
 	}
 	
