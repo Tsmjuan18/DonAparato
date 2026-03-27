@@ -4,7 +4,9 @@ public class CompraDTO {
 	ClienteDTO miCliente;
 	ProductoDTO miProducto;
 	
-	
+	public CompraDTO() {
+		
+	}
 	
 	
 	

@@ -2,6 +2,7 @@ package logica;
 
 import controlador.Coordinador;
 import modelo.dto.ClienteDTO;
+import modelo.dto.CompraDTO;
 
 public class Procesos {
 	
@@ -14,58 +15,56 @@ public class Procesos {
 		
 	}
 	
-	public void calcularCompra(ClienteDTO cliente) {
-		/*
-		Double compra;
-		double porcentaje;
-		double precioTotal;
-		double descuento;	
+	public void calcular(CompraDTO compra) {
 		
 		
-		switch(cliente.getTipo()) {
+		double descuento;
 		
-		 case "A":
-			 	porcentaje= 0.40;
-				//precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
-				descuento= precioTotal*porcentaje;				
-				compra= precioTotal-descuento;
-				//cliente.setCompraTotal(compra);
-		        break;
 		
+		
+		switch(compra.getMiCliente().getTipo()) {
+		
+		case "A":
+			descuento = 0.40;
+			compra.getMiProducto().setDescuento(descuento);
+			
+	        break;	
 		
 		case "B":
-			 porcentaje= 0.20;
-			// precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
-			 descuento= precioTotal*porcentaje;
-			
-			compra= precioTotal-descuento;
-			//cliente.setCompraTotal(compra);
-	        break;
-	
+			descuento = 0.20;
+			compra.getMiProducto().setDescuento(descuento);
+			 
+	        break;	
 	
 		case "C":
-			porcentaje= 0.10;
-			//precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
-			descuento= precioTotal*porcentaje;
-			
-			compra= precioTotal-descuento;
-			//cliente.setCompraTotal(compra);
+			descuento= 0.10;
+			compra.getMiProducto().setDescuento(descuento);
 		      break;
 		      
 		 default:
-			 
+			descuento = 0;
+			compra.getMiProducto().setDescuento(descuento);
 			System.out.println("No se le realiza descuento");			
-			//precioTotal= cliente.getValorUnitario()*cliente.getCantidadProductos();
-			//cliente.setCompraTotal(precioTotal);
-			break;
-		
+			
+			break;		
 		}
-		*/
-		
-		
-		
-		
+		calcularCompra(compra);
 	}
+	
+	
+	
+		
+		public void calcularCompra(CompraDTO compra) {				
+			
+			double venta= compra.getMiProducto().getValorUnitario()*compra.getMiProducto().getCantidadProductos();			
+			double porcentaje = compra.getMiProducto().getDescuento()*venta;				
+			double totalVenta= venta-porcentaje;
+			compra.getMiProducto().setCompraTotal(totalVenta);;
+		}
+		
+		
+		
+		
 
 	public void setMiCoordinador(Coordinador miCoordinador) {
 		this.miCoordinador = miCoordinador;
