@@ -75,7 +75,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		
 		if(e.getSource()== btnIniciar) {
 			
-			miCoordinador.mostraVentanaCompra();
+			miCoordinador.mostraVentanaCliente();
 			
 		}
 		

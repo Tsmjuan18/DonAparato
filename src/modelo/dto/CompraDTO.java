@@ -1,12 +1,16 @@
 package modelo.dto;
 
+
+
 public class CompraDTO {
 	ClienteDTO miCliente;
 	ProductoDTO miProducto;
+
 	
 	public CompraDTO() {
-		
-	}
+        miCliente  = new ClienteDTO();   // ← agregar esto
+        miProducto = new ProductoDTO();  // ← agregar esto
+    }
 	
 	
 	
@@ -23,5 +27,12 @@ public class CompraDTO {
 	public void setMiProducto(ProductoDTO miProducto) {
 		this.miProducto = miProducto;
 	}
+
+
+
+
+	
+	
+	
 
 }

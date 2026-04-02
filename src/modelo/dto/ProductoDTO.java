@@ -3,6 +3,7 @@ package modelo.dto;
 public class ProductoDTO {
 	
 	private double descuento;
+	private String id;
 	private String nombreProducto;
 	private double valorUnitario;
 	private double cantidadProductos;
@@ -13,11 +14,12 @@ public class ProductoDTO {
 	
 	
 	
-	public double getDescuento() {
-		return descuento;
+	
+	public String getId() {
+		return id;
 	}
-	public void setDescuento(double descuento) {
-		this.descuento = descuento;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getNombreProducto() {
 		return nombreProducto;
@@ -43,6 +45,25 @@ public class ProductoDTO {
 	public void setCompraTotal(double compraTotal) {
 		this.compraTotal = compraTotal;
 	}
+	public double getDescuento() {
+		return descuento;
+	}
+	public void setDescuento(double descuento) {
+		this.descuento = descuento;
+	}
+	@Override
+	public String toString() {
+		return "ProductoDTO [descuento=" + descuento + ", id=" + id + ", nombreProducto=" + nombreProducto
+				+ ", valorUnitario=" + valorUnitario + ", cantidadProductos=" + cantidadProductos + ", compraTotal="
+				+ compraTotal + ", getId()=" + getId() + ", getNombreProducto()=" + getNombreProducto()
+				+ ", getValorUnitario()=" + getValorUnitario() + ", getCantidadProductos()=" + getCantidadProductos()
+				+ ", getCompraTotal()=" + getCompraTotal() + ", getDescuento()=" + getDescuento() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	
+	
+	
+	
 	
 	
 
