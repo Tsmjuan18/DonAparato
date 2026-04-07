@@ -30,6 +30,7 @@ public class Coordinador {
 	Procesos miProcesos;
 	CompraDTO miCompra;
 	
+	
 	public Coordinador() {
 	//	mapaCliente= new HashMap<String, ClienteDTO>();
 	//	mapaProducto = new HashMap<String, ProductoDTO>();
@@ -41,6 +42,7 @@ public class Coordinador {
 		 return miClienteDAO.crear(miCompra.getMiCliente());
 		
 	}
+	
 	
 	//leer cliente
 	public ClienteDTO leerCliente(String documento) {

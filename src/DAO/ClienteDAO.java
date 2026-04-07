@@ -36,9 +36,9 @@ public class ClienteDAO {
         try {
             String sql = "SELECT * FROM cliente WHERE documento = ?";
             PreparedStatement ps = conexion.prepareStatement(sql);
-            ps.setString(1, documento);
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
+            ps.setString(1, documento);// rellena el ?
+            ResultSet rs = ps.executeQuery();//  El ResultSet es la respuesta que llega de la base de datos.
+            if (rs.next()) {// recorre las filas
                 ClienteDTO cliente = new ClienteDTO();
                 cliente.setDocumento(rs.getString("documento"));
                 cliente.setNombre(rs.getString("nombre"));

@@ -16,6 +16,7 @@ public class ConexionDB {
     public static Connection getConexion() {
         if (conexion == null) {
             try {
+            	
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conexion = DriverManager.getConnection(URL, USUARIO, CLAVE);
                 System.out.println("Conexion exitosa");
